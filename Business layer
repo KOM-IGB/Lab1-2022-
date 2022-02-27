@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BusinessLayer
+{
+    public class Class1
+    {
+        public static double monthly(int adult, int child, double income)
+        {
+            double monthlyPremium = 0;
+            int childmax = child > 3 ? 3 : child;
+
+            if (income <= 7000)
+            {
+                double membercost = 582;
+                double adultcost = 476;
+                double childcost = 264;
+                double monthlycost = membercost + (adultcost * adult) + (childcost * child);
+                monthlyPremium = monthlycost;
+            }
+            else if (income <= 12000)
+            {
+                double membercost = 868;
+                double adultcost = 709;
+                double childcost = 470;
+            }
+            else if (income > 12000)
+            {
+                double membercost = 1084;
+                double adultcost = 887;
+                double childcost = 586;
+                double monthlycost = membercost + (adultcost * adult) + (childcost * child);
+                monthlyPremium = monthlycost;
+
+            }
+        }
+        public static double Penalties(int mainAge, double monthly)
+        {
+            double penalty = 0;
+            double sum = 0;
+            int maxAge = 35;
+            if (mainAge - maxAge <= 4)
+            {
+                sum = monthly * 0.05;
+                penalty = sum +
+            }
+        }
+    }
+}
