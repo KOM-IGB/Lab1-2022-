@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using BusinessLayer;
+
+namespace Medicalaid_Lab1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double monthlycontribution = 0;
+            int list = 1;
+            while (true)
+            {
+             
+                Console.WriteLine("Enter the main member name (or enter ZZZ to terminate):");
+                String name = Console.ReadLine();
+                name = name.ToLower();
+
+                if (name == "zzz")
+                    break;
+
+                Console.WriteLine("How old is the main member? ");
+                int mainAge = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Enter the number of adult dependants: ");
+                int adult = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Enter the number of child dependants: ");
+                int child = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Enter main member's monthly salary: ");
+                double income = double.Parse(Console.ReadLine());
+
+                Console.WriteLine();
+            }
+        }
+       
+    }
+}
